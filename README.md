@@ -281,3 +281,56 @@ for(int i = 0;i < strlen(badStr);i++){
 - `sizeof` or `sizeof` operator lets us see the data type or variable size in bytes
 - operator precedence
     * PEDMAS
+
+# Control flow
+#### If/else statement
+The default if statement resembles this:
+```C
+if(condition){
+    something();
+}
+else{
+    somethingelse();
+}
+```
+#### Switch
+The default switch statement resembles this:
+```C
+switch(var){
+    case condition:
+        printf("bla");
+        break;
+    case condition2:
+        printf("bla2");
+        break;
+    default: // if none of the conditions are matched
+        printf("default");
+};
+```
+
+#### Ternary operator
+
+Say we have this code which will return the biggest number of x and y:
+```C
+int x = 4;
+int y = 10;
+max = 0;
+
+if(x > y){
+    max = x;
+}
+else{
+    max = y;
+}
+return max;
+```
+Instead of doing a if/else statement like this we can use ternary operator `?`
+
+The code turns into this:
+```C
+int x = 4;
+int y = 10;
+int max = (x > y) ? x:y;
+```
+In this case we declare x and y. With the ternary operator we then evaluate the result of `x > y`.
+If the result is true, it will then get assigned to x (`operation returns true : operation returns false`) otherwise it gets assigned y.
