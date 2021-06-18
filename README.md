@@ -334,3 +334,37 @@ int max = (x > y) ? x:y;
 ```
 In this case we declare x and y. With the ternary operator we then evaluate the result of `x > y`.
 If the result is true, it will then get assigned to x (`operation returns true : operation returns false`) otherwise it gets assigned y.
+
+If we simnply wanted to print the greatest of the two variables we could even shorten it to:
+```C
+int x = 10;
+int y = 5;
+printf("%d", (x > y) ? x:y);
+```
+
+# Control flow (loops)
+#### While loop
+```C
+while(condition){
+    something();
+}
+```
+#### Do/While loop
+We can use Do/While instead of While if we want to make sure the block of code runs at least once
+```C
+do{
+    something();
+}while(condition);
+```
+#### For loops
+```C
+for(int iterator; condition; iterator++){
+    something();
+}
+```
+
+# Scope
+Without defining the scope of a variable, the default will be that it is only accessible between the `{}` of it's function. The "local"-est scope is always the one used.
+
+We can share variable values from a function to another function using the return statement.
+
